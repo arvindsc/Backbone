@@ -1,1 +1,31 @@
-"Hello"
+-------Outline---------
+*** The purpose of models
+*** Defining new models types
+*** Instantiating models
+*** Working with models properties
+*** Model events
+*** Model identity
+*** Defaults
+*** Validation
+
+*************The purpose of models*******************
+Models form the core of your application
+They contain your application's state as well as logic and behavior
+Model are the single point of truth for data.
+Model provide a lifecycle 
+They communicate changes to the rest of application via events.
+
+*************Defining new models types*******************
+-Create new Model 'type' by extending Backbone.Model
+		var Vehicle = Backbone.Model.extend({});
+	extend(): extend is a function shared by Model, Collection, Router and View. It establishes an inheritance relationship between two objects.
+- Model types can have 'class properties' as well.
+		var Vehicle = Backbone.Model.extend({},
+			{
+				summary:function(){
+					return 'Vehicle are for travelling';
+				}
+			}
+		);
+ 
+
